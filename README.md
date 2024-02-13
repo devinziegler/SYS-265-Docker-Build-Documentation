@@ -65,6 +65,7 @@ Make sure firewall rules are enabled to access the web portal for a different ho
 ```
 http://<docker_hostname>:80
 ```
+The Web Portal should look like this:
 ![Exptected Output](docker_expected.png)
 
 
