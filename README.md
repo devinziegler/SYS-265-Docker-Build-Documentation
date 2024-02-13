@@ -65,6 +65,6 @@ Make sure firewall rules are enabled to access the web portal for a different ho
 ```
 http://<docker_hostname>:80
 ```
-
+![Exptected Output](docker_expected.png)
 
 
