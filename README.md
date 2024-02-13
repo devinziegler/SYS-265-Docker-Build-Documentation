@@ -60,12 +60,14 @@ Execute the following command
 ```
 docker ps
 ```
-Two containers should be running, `mariadb` & `piwigo`
+Two containers should be running, `mariadb` & `piwigo`, make note of the mariadb container name, it will be needed when configuring through the web GUI. 
 Make sure firewall rules are enabled to access the web portal for a different host using the following URL:
 ```
 http://<docker_hostname>:80
 ```
 The Web Portal should look like this:
 ![Exptected Output](docker_expected.png)
+
+
 
 
