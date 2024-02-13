@@ -16,7 +16,7 @@ Make a `.yml` file. This will be used as the docker compose config.
 touch docker-compose.yml
 ```
 
-Use wget to get the base config from this repo or add the following to your config:
+[piwigo-compose.yml](https://github.com/deivnziegler/SYS-265-Docker-Build-Documentation/blob/main/piwigo-compose.yml)
 
 ```
 services:
@@ -24,31 +24,41 @@ services:
     image: lscr.io/linuxserver/mariadb:latest
     container_name: mariadb
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-      - MYSQL_ROOT_PASSWORD=ROOT_ACCESS_PASSWORD
-      - MYSQL_DATABASE=USER_DB_NAME #optional
-      - MYSQL_USER=MYSQL_USER #optional
-      - MYSQL_PASSWORD=DATABASE_PASSWORD #optional
-      - REMOTE_SQL=http://URL1/your.sql,https://URL2/your.sql #optional
-    volumes:
-      - /path/to/mariadb/config:/config
-    ports:
-      - 3306:3306
-    restart: unless-stopped
+    ...
 services:
   piwigo:
     image: lscr.io/linuxserver/piwigo:latest
     container_name: piwigo
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Etc/UTC
-    volumes:
-      - /path/to/piwigo/config:/config
-      - /path/to/appdata/gallery:/gallery
-    ports:
-      - 80:80
-    restart: unless-stopped
+    ...
 ```
+
+## Config Edits
+
+Use comments in the file to set your specifications if not using the defaults. The following must be changed in order to be deployed: 
+```
+volumes:
+  - /home/user/piwigo/dbconfig:/config
+```
+Movind to piwigo we will need a gallary directory as well as a config directory
+```
+volumes:
+  - /home/user/piwigo/pconfig:/config
+  - /home/user/piwigo/gallery:/gallery
+```
+
+ ## Deploying containers
+```
+$ docker compose up -d
+[+] Running 2/2
+   Container mariadb  Started
+   Container piwigo   Started
+```
+
+## Expected Result
+The following containers should be running when this command is used:
+```
+
+```
+
+
