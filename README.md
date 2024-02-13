@@ -65,7 +65,6 @@ Make sure firewall rules are enabled to access the web portal for a different ho
 ```
 http://<docker_hostname>:80
 ```
-![docker_expected](https://github.com/deivnziegler/SYS-265-Docker-Build-Documentation/assets/113952618/68145387-ba34-4226-835f-6183e5ce0554)
 
 
 
