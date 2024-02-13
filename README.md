@@ -40,7 +40,7 @@ Use comments in the file to set your specifications if not using the defaults. T
 volumes:
   - /home/user/piwigo/dbconfig:/config
 ```
-Movind to piwigo we will need a gallary directory as well as a config directory
+Piwigo we will need a gallary directory as well as a config directory
 ```
 volumes:
   - /home/user/piwigo/pconfig:/config
