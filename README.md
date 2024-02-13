@@ -72,7 +72,7 @@ The Web Portal should look like this:
 
  ## Web GUI
 Fill out the web GUI using information from earlier, or if left unchanged, the defaults as shown below:
- * Password is `DATABASE_PASSWORD`
+ * Default password is `DATABASE_PASSWORD`
    
 ![Database Config](database_configuration.png)
 
