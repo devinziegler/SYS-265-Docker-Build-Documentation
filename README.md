@@ -66,8 +66,15 @@ Make sure firewall rules are enabled to access the web portal for a different ho
 http://<docker_hostname>:80
 ```
 The Web Portal should look like this:
+
+
 ![Exptected Output](docker_expected.png)
 
+ ## Web GUI
+Fill out the web GUI using information from earlier, or if left unchanged, the defaults as shown below:
+ * Password is `DATABASE_PASSWORD`
+   
+![Database Config](database_configuration.png)
 
 
 
