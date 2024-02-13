@@ -36,6 +36,8 @@ services:
 ## Config Edits
 
 Use comments in the file to set your specifications if not using the defaults. The following must be changed in order to be deployed: 
+
+MariaDB will need a path for a config dir:
 ```
 volumes:
   - /home/user/piwigo/dbconfig:/config
